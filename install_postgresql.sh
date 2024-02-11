@@ -5,7 +5,7 @@ sudo apt-get update
 sudo apt-get install -y curl
 
 # Add Node.js repository and install Node.js
-curl -fsSL https://deb.nodesource.com/setup_16.x | sudo -E bash -
+curl -fsSL https://deb.nodesource.com/setup_20.x | sudo -E bash - &&\
 sudo apt-get install -y nodejs
 
 # Add PostgreSQL repository and key
