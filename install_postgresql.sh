@@ -36,11 +36,8 @@ sudo -u postgres psql -c "ALTER USER postgres PASSWORD 'myPassword';"
 sudo -u postgres psql -c "CREATE DATABASE evershop;"
 sudo -u postgres psql -c "\q"
 
-# Install create-evershop-app globally if not installed
-npm list -g create-evershop-app || npm install -g create-evershop-app
-
 # Create evershop app in my-app directory
-cd my-app || exit
+cd && cd my-app || exit
 npx create-evershop-app my-app
 
 echo "PostgreSQL installation, configuration, and setup completed. Evershop app created in 'my-app' directory."
