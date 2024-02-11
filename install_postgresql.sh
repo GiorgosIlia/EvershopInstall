@@ -36,8 +36,13 @@ sudo -u postgres psql -c "ALTER USER postgres PASSWORD 'myPassword';"
 sudo -u postgres psql -c "CREATE DATABASE evershop;"
 sudo -u postgres psql -c "\q"
 
+# change to main directory
+cd 
+
 # Create evershop app in my-app directory
-cd && cd my-app || exit
-npx create-evershop-app my-app
+sudo npx create-evershop-app my-app 
+
+# Go inside the app
+cd my-app || exit
 
 echo "PostgreSQL installation, configuration, and setup completed. Evershop app created in 'my-app' directory."
