@@ -31,8 +31,12 @@ read -p "Press Enter when you have finished editing postgresql.conf..."
 # Restart PostgreSQL service
 sudo service postgresql restart
 
+# Prompt user for PostgreSQL password
+read -sp "Enter PostgreSQL password for user 'postgres': " postgres_password
+echo ""
+
 # Set PostgreSQL password and create database
-sudo -u postgres psql -c "ALTER USER postgres PASSWORD 'myPassword';"
+sudo -u postgres psql -c "ALTER USER postgres PASSWORD '$postgres_password';"
 sudo -u postgres psql -c "CREATE DATABASE evershop;"
 sudo -u postgres psql -c "\q"
 
