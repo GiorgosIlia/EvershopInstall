@@ -42,6 +42,8 @@ sudo -u postgres psql -c "\q"
 
 # change to main directory
 cd 
+# TODOO:
+# add pg_ident.conf file configs for database
 
 # Create evershop app in my-app directory
 sudo npx create-evershop-app my-app 
